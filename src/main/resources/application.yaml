@@ -1,0 +1,8 @@
+quarkus:
+  cxf:
+    path: /soap
+    endpoint:
+      "/afmelden":
+        implementor: nl.cge.b2z.asystem.soap.AfmeldServiceImpl
+        logging:
+          enabled: pretty

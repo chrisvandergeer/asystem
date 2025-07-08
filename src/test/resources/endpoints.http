@@ -1,2 +1,22 @@
-## Greeting resource
+### Greeting resource
 GET http://localhost:8080/hello
+
+
+### WSDL opvragen
+GET http://localhost:8080/soap/afmelden?wsdl
+
+
+
+### Aanroep van de SOAP afmeld service
+POST http://localhost:8080/soap/afmelden
+Content-Type: text/xml; charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:soap="http://soap.asystem.b2z.cge.nl/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <soap:meldAf>
+            <arg0>123</arg0>
+        </soap:meldAf>
+    </soapenv:Body>
+</soapenv:Envelope>
